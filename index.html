@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game Selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <style>
+        .corner-top-left {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+        }
+
+        .corner-top-right {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+        }
+
+        .corner-bottom-left {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+        }
+
+        .corner-bottom-right {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+        }
+
+        body {
+            font-family: "Rajdhani", sans-serif;
+            /* font-weight: 400;
+            font-style: normal; */
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: "Tiny5", sans-serif;
+            font-style: normal; 
+            margin-top: -50px;
+        }
+
+        a{
+            color: #fff;
+        }
+
+        .game-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0;
+            /* Change border-radius to 0 */
+            border: 2px solid #6eecfc;
+            transition: background-color 0.3s;
+            position: relative;
+            /* Add position relative */
+            overflow: hidden;
+            /* Add overflow hidden */
+        }
+
+        .game-button::before {
+            content: attr(data-index);
+            /* Add data-index attribute as content */
+            position: absolute;
+            top: -10px;
+            /* Adjust top position */
+            left: -10px;
+            /* Adjust left position */
+            width: 20px;
+            /* Adjust width */
+            height: 20px;
+            /* Adjust height */
+            background-color: #6eecfc;
+            /* Fill with border color */
+            color: #000;
+            /* Set text color */
+            font-size: 12px;
+            /* Adjust font size */
+            font-weight: bold;
+            /* Set font weight */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0;
+            /* Make it square */
+            z-index: 1;
+            /* Set z-index to be above the button */
+        }
+
+        .game-button:hover {
+            background-color: #6eecfc;
+        }
+
+        .cyberpunk-element-top {
+            display: block;
+            width: 100%;
+            height: 10px;
+            background-color: #ffcc00;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .cyberpunk-element-bottom {
+            display: block;
+            width: 100%;
+            height: 10px;
+            background-color: #ffcc00;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .cyberpunk-element-left {
+            display: block;
+            width: 10px;
+            height: 100%;
+            background-color: #ffcc00;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .cyberpunk-element-right {
+            display: block;
+            width: 10px;
+            height: 100%;
+            background-color: #ffcc00;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 9999;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: 9999;
+        }
+
+        .version {
+            font-size: 12px;
+            opacity: 0.8;
+            color: #fff;
+        }
+
+        .dot-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .dot {
+            width: 1px;
+            height: 1px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.5;
+            /* Set dot opacity to 50% */
+        }
+
+        .intro__header {
+            align-items: center;
+            background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 28px 28px;
+            /* display: flex; */
+            flex-direction: column;
+            gap: 24px;
+            margin: -2px 0;
+            max-width: 800px;
+            padding: 88px 48px 0;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cyberpunk-element-top"></div>
+    <div class="cyberpunk-element-bottom"></div>
+    <div class="cyberpunk-element-left"></div>
+    <div class="cyberpunk-element-right"></div>
+    <div class="corner-top-left"></div>
+    <div class="corner-top-right"></div>
+    <div class="corner-bottom-left"></div>
+    <div class="corner-bottom-right"></div>
+
+    <div class="container">
+        <header>
+        </header>
+        <main>
+            <div class="intro__header">
+                <h1>Game Selector</h1>
+                <a href="dino/" class="game-button">Dino</a>
+                <a href="surf" class="game-button">S.U.R.F.</a>
+                <a href="operius/" class="game-button">Operius</a>
+                <p>Choose one and start your journey.</p>
+                <br>
+            </div>
+
+        </main>
+    </div>
+
+
+    <footer class="footer">
+        <div class="version"><a href="log.html">Powered by PZV. Version 1.0.0</a> </div>
+    </footer>
+
+    <div class="dot-grid">
+        <!-- BEGIN: Add dot grid elements -->
+        <!-- Use JavaScript to generate the dot grid elements -->
+    </div>
+    </div>
+
+    <script>
+        // Generate dot grid elements
+        const dotGrid = document.querySelector('.dot-grid');
+        const dotSize = 20; // Size of each dot in pixels
+        const dotSpacing = 20; // Spacing between dots in pixels
+        const dotColor = '#fff'; // Color of the dots
+
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        const numDotsX = Math.ceil(screenWidth / dotSpacing);
+        const numDotsY = Math.ceil(screenHeight / dotSpacing);
+
+        for (let i = 0; i < numDotsX; i++) {
+            for (let j = 0; j < numDotsY; j++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.style.top = `${j * dotSpacing}px`;
+                dot.style.left = `${i * dotSpacing}px`;
+                dot.style.backgroundColor = dotColor;
+                dotGrid.appendChild(dot);
+            }
+        }
+
+        // Adjust the position of the game button labels
+        const gameButtons = document.querySelectorAll('.game-button');
+        gameButtons.forEach(button => {
+            const index = button.getAttribute('data-index');
+            const label = button.querySelector('.game-button::before');
+            label.style.top = `-${label.offsetHeight / 2}px`;
+            label.style.left = `-${label.offsetWidth / 2}px`;
+        });
+    </script>
+</body>
+
+</html>
