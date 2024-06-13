@@ -1,4 +1,4 @@
-# A Simple Game-Collection
+# PZV`s Game Collection
 [![EZLJ - Game-Collection](https://img.shields.io/static/v1?label=EZLJ&message=Game-Collection&color=blue&logo=github)](https://github.com/EZLJ/Game-Collection "Go to GitHub repo")
 [![Project of - ZCSTUDIO](https://img.shields.io/badge/Project_of-ZCSTUDIO-blueviolet)](https://www.zcstudio.online)
 
