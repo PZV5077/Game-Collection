@@ -15,7 +15,7 @@
 Released under [GNU 3.0](/LICENSE) by [@EZLJ](https://github.com/EZLJ).
 ## Features
 
-Includes a Cyberpunk style game selector, specially designed and modified for a better performence on modern computer.
+Includes a Cyberpunk style game selector, games are specially designed and modified for better performence on modern computer.
 
 Frequently updated with new games and features.
 
