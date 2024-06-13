@@ -1,0 +1,366 @@
+.corner-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00;
+}
+
+.corner-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00;
+}
+
+.corner-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00;
+}
+
+.corner-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    /* font-weight: 400;
+    font-style: normal; */
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Tiny5", sans-serif;
+    font-style: normal; 
+    margin-top: -50px;
+}
+
+a{
+    color: #fff;
+}
+
+.game-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0;
+    /* Change border-radius to 0 */
+    border: 2px solid #6eecfc;
+    transition: background-color 0.3s;
+    position: relative;
+    /* Add position relative */
+    overflow: hidden;
+    /* Add overflow hidden */
+}
+
+.game-button::before {
+    content: attr(data-index);
+    /* Add data-index attribute as content */
+    position: absolute;
+    top: -10px;
+    /* Adjust top position */
+    left: -10px;
+    /* Adjust left position */
+    width: 20px;
+    /* Adjust width */
+    height: 20px;
+    /* Adjust height */
+    background-color: #6eecfc;
+    /* Fill with border color */
+    color: #000;
+    /* Set text color */
+    font-size: 12px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Set font weight */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    /* Make it square */
+    z-index: 1;
+    /* Set z-index to be above the button */
+}
+
+.game-button:hover {
+    background-color: #6eecfc;
+}
+
+.red-game-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0;
+    /* Change border-radius to 0 */
+    border: 2px solid #6eecfc;
+    transition: background-color 0.3s;
+    position: relative;
+    /* Add position relative */
+    overflow: hidden;
+    /* Add overflow hidden */
+}
+
+.red-game-button::before {
+    content: attr(data-index);
+    /* Add data-index attribute as content */
+    position: absolute;
+    top: 0px;
+    /* Adjust top position */
+    left: 0px;
+    /* Adjust left position */
+    width: 23px;
+    /* Adjust width */
+    height: 12px;
+    /* Adjust height */
+    background-color: #fa2e2e;
+    /* Fill with border color */
+    color: #fff;
+    /* Set text color */
+    font-size: 10px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Set font weight */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    /* Make it square */
+    z-index: 1;
+    /* Set z-index to be above the button */
+}
+
+.red-game-button:hover {
+    background-color: #6eecfc;
+}
+
+.orange-game-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0;
+    /* Change border-radius to 0 */
+    border: 2px solid #6eecfc;
+    transition: background-color 0.3s;
+    position: relative;
+    /* Add position relative */
+    overflow: hidden;
+    /* Add overflow hidden */
+}
+
+.orange-game-button::before {
+    content: attr(data-index);
+    /* Add data-index attribute as content */
+    position: absolute;
+    top: 0px;
+    /* Adjust top position */
+    left: 0px;
+    /* Adjust left position */
+    width: 23px;
+    /* Adjust width */
+    height: 10px;
+    /* Adjust height */
+    background-color: orange;
+    /* Fill with border color */
+    color: #ffffff;
+    /* Set text color */
+    font-size: 10px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Set font weight */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    /* Make it square */
+    z-index: 1;
+    /* Set z-index to be above the button */
+}
+
+.orange-game-button:hover {
+    background-color: #6eecfc;
+}
+
+.green-game-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0;
+    /* Change border-radius to 0 */
+    border: 2px solid #6eecfc;
+    transition: background-color 0.3s;
+    position: relative;
+    /* Add position relative */
+    overflow: hidden;
+    /* Add overflow hidden */
+}
+
+.green-game-button::before {
+    content: attr(data-index);
+    /* Add data-index attribute as content */
+    position: absolute;
+    top: 0px;
+    /* Adjust top position */
+    left: 0px;
+    /* Adjust left position */
+    width: 43px;
+    /* Adjust width */
+    height: 10px;
+    /* Adjust height */
+    background-color: green;
+    /* Fill with border color */
+    color: #fff;
+    /* Set text color */
+    font-size: 10px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Set font weight */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    /* Make it square */
+    z-index: 1;
+    /* Set z-index to be above the button */
+}
+
+.green-game-button:hover {
+    background-color: #6eecfc;
+}
+
+.cyberpunk-element-top {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #ffcc00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.cyberpunk-element-bottom {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #ffcc00;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.cyberpunk-element-left {
+    display: block;
+    width: 10px;
+    height: 100%;
+    background-color: #ffcc00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.cyberpunk-element-right {
+    display: block;
+    width: 10px;
+    height: 100%;
+    background-color: #ffcc00;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.version {
+    font-size: 12px;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.dot-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.dot {
+    width: 1px;
+    height: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.5;
+    /* Set dot opacity to 50% */
+}
+
+.intro__header {
+    align-items: center;
+    background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 24px;
+    margin: -2px 0;
+    max-width: 800px;
+    padding: 88px 48px 0;
+    text-align: center;
+}
