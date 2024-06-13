@@ -1,3 +1,42 @@
+/* Cyberpunk Theme */
+/* Created by PZV, Jun 13 2024 */
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    /* font-weight: 400;
+    font-style: normal; */
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+h1 {
+    font-family: "Tiny5", sans-serif;
+    font-style: normal;
+    margin-top: -40px;
+}
+
+a {
+    color: #fff;
+}
+
+code{
+    font-size: 1.2rem;
+    font-family: 'Tiny5', sans-serif;
+    color: #00ff00;
+}
+
+/* Corner Elements */
 .corner-top-left {
     position: fixed;
     top: 0;
@@ -34,31 +73,7 @@
     background-color: #ffcc00;
 }
 
-body {
-    font-family: "Rajdhani", sans-serif;
-    /* font-weight: 400;
-    font-style: normal; */
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    font-family: "Tiny5", sans-serif;
-    font-style: normal; 
-    margin-top: -50px;
-}
-
-a{
-    color: #fff;
-}
-
+/* Buttons */
 .game-button {
     display: inline-block;
     padding: 10px 20px;
@@ -259,6 +274,7 @@ a{
     background-color: #6eecfc;
 }
 
+/* Band Elements */
 .cyberpunk-element-top {
     display: block;
     width: 100%;
@@ -303,6 +319,7 @@ a{
     z-index: 9999;
 }
 
+/* The Container */
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -311,6 +328,22 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+.intro__header {
+    align-items: center;
+    background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 24px;
+    margin: -2px 0;
+    max-width: 800px;
+    padding: 30px 30px 0;
+    text-align: center;
+}
+
+/* Footer */
 
 .footer {
     display: flex;
@@ -331,6 +364,7 @@ a{
     color: #fff;
 }
 
+/* Background */
 .dot-grid {
     position: fixed;
     top: 0;
@@ -351,16 +385,20 @@ a{
     /* Set dot opacity to 50% */
 }
 
-.intro__header {
-    align-items: center;
-    background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
-    /* display: flex; */
-    flex-direction: column;
-    gap: 24px;
-    margin: -2px 0;
-    max-width: 800px;
-    padding: 88px 48px 0;
-    text-align: center;
+.logo {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 30px;
+    padding-top: 0%;
+    
+    /* Adjust the width and height as per your requirement */
+}
+
+.logo_big {
+    width: 200px;
+    height: 100px;
+    padding-bottom: 30px;
+    padding-top: 0%;
+    
+    /* Adjust the width and height as per your requirement */
 }
